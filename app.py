@@ -12,7 +12,7 @@ from security import authenticate, identity
 from db import db
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL", "sqlite:///data.db") #"postgresql://wrgmusxmocfrli:a8667ac025befb8a8270a0c1188f106ebe3cf755ba16a18f9a2318d865696df1@ec2-18-202-1-222.eu-west-1.compute.amazonaws.com:5432/ddhhq76qmtaunp"
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URI", "sqlite:///data.db") #"postgresql://wrgmusxmocfrli:a8667ac025befb8a8270a0c1188f106ebe3cf755ba16a18f9a2318d865696df1@ec2-18-202-1-222.eu-west-1.compute.amazonaws.com:5432/ddhhq76qmtaunp"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config['PROPAGATE_EXCEPTIONS'] = True # To allow flask propagating exception even if debug is set to false on app
 app.secret_key = 'jose'
